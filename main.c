@@ -21,7 +21,6 @@ int main(int argc, char **argv)
 	char *filename;
 	stack_t *stack = NULL;
 
-	printf("in");
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -46,5 +45,6 @@ int main(int argc, char **argv)
 		free_list(tokens);
 	}
 	free(lines);
+	free_stack(&stack);
 	return (0);
 }
