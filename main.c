@@ -4,7 +4,8 @@ instruction_t instructions[] = {
 	{"push", push},
 	{"pall", pall},
 	{"pint", pint},
-	{"pop", pop}
+	{"pop", pop},
+	{"swap", swap}
 };
 
 int stack_size = 0;
