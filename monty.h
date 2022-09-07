@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include <ctype.h>
 
-#define INSTRUCTION_SIZE 6
+#define INSTRUCTION_SIZE 8
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -61,6 +61,20 @@ extern args_t args;
 
 extern int stack_size;
 
+/**
+ * struct args_s - arguments for opcode
+ * @tokens: the arguments
+ * @opcode: the opcode
+ *
+ * Description: opcode and it's arguments
+ */
+typedef struct file_details {
+	char **lines;
+	int no_of_lines;
+} file_details;
+
+extern file_details fd;
+
 char **getlines(int no_of_lines, char *filename);
 
 int lines_size(char *filename);
@@ -80,6 +94,12 @@ void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 
 void add(stack_t **stack, unsigned int line_number);
+
+void nop(stack_t **stack, unsigned int line_number);
+
+void sub(stack_t **stack, unsigned int line_number);
+
+void clean_up(stack_t **stack, int line_number);
 
 char **tokenize(int size, char *token, char *delim);
 

@@ -15,8 +15,7 @@ void push(stack_t **stack, unsigned int line_number)
 	if (item == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		free_stack(stack);
-		free_list(args.tokens);
+		clean_up(stack, line_number);
 		exit(EXIT_FAILURE);
 	}
 	num = check_input(args.tokens[1], line_number);

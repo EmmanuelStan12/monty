@@ -25,6 +25,7 @@ void execute(int line_no, stack_t **stack)
 	if (!seen)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_no, a.tokens[0]);
+		clean_up(stack, line_no);
 		exit(EXIT_FAILURE);
 	}
 }

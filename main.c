@@ -6,12 +6,16 @@ instruction_t instructions[] = {
 	{"pint", pint},
 	{"pop", pop},
 	{"swap", swap},
-	{"add", add}
+	{"add", add},
+	{"nop", nop},
+	{"sub", sub}
 };
 
 int stack_size = 0;
 
 args_t args = {NULL, NULL, 0};
+
+file_details fd = {NULL, 0};
 
 /**
  * main - Entry point
@@ -34,6 +38,8 @@ int main(int argc, char **argv)
 	filename = argv[1];
 	l_size = lines_size(filename);
 	lines = getlines(l_size, filename);
+	fd.lines = lines;
+	fd.no_of_lines = l_size;
 	for (i = 0; i < l_size; i++)
 	{
 		int t_size;
