@@ -8,7 +8,8 @@ instruction_t instructions[] = {
 	{"swap", swap},
 	{"add", add},
 	{"nop", nop},
-	{"sub", sub}
+	{"sub", sub},
+	{"div", _div}
 };
 
 int stack_size = 0;
