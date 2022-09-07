@@ -15,7 +15,6 @@ void free_stack(stack_t **stack)
 	head = *stack;
 	while (i < stack_size)
 	{
-		printf("%d\n", head->n);
 		temp = head->next;
 		free(head);
 		head = temp;

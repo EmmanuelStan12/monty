@@ -2,7 +2,8 @@
 
 instruction_t instructions[] = {
 	{"push", push},
-	{"pall", pall}
+	{"pall", pall},
+	{"pint", pint}
 };
 
 int stack_size = 0;
