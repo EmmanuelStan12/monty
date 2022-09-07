@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include <ctype.h>
 
-#define INSTRUCTION_SIZE 3
+#define INSTRUCTION_SIZE 4
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -74,6 +74,8 @@ void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 
 void pint(stack_t **stack, unsigned int line_number);
+
+void pop(stack_t **stack, unsigned int line_number);
 
 char **tokenize(int size, char *token, char *delim);
 
