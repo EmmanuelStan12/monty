@@ -10,7 +10,8 @@ instruction_t instructions[] = {
 	{"nop", nop},
 	{"sub", sub},
 	{"div", _div},
-	{"mul", mul}
+	{"mul", mul},
+	{"mod", mod}
 };
 
 int stack_size = 0;
@@ -47,9 +48,13 @@ int main(int argc, char **argv)
 		int t_size;
 		char **tokens;
 
+		if (lines[i][0] == '#')
+		{
+			free(lines[i]);
+			continue;
+		}
 		t_size = token_size(lines[i], " ");
 		tokens = tokenize(t_size, lines[i], " \n");
-
 		args.tokens = tokens;
 		args.opcode = tokens[0];
 		args.t_size = t_size;
