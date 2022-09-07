@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * lines_size - gets the number of lines
@@ -16,7 +16,7 @@ int lines_size(char *filename)
 	file = fopen(filename, "r");
 	if (file == NULL)
 	{
-		fprintf(stderr, "Error:");
+		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
 	}
 	while ((rstatus = getline(&line, &size, file)) != -1)

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * check_input - checks of the input is an int
@@ -9,7 +9,7 @@
 int check_input(char *input, int line_no)
 {
 	int num;
-	
+
 	if (input == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer", line_no);

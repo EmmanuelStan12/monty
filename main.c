@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 instruction_t instructions[] = {
 	{"push", push},
@@ -11,7 +11,8 @@ args_t args = {NULL, NULL, 0};
 
 /**
  * main - Entry point
- *
+ * @argc: the no of arguments
+ * @argv: the arguments
  * Return: the status
  */
 int main(int argc, char **argv)
@@ -40,7 +41,7 @@ int main(int argc, char **argv)
 		args.tokens = tokens;
 		args.opcode = tokens[0];
 		args.t_size = t_size;
-		execute(i, &stack);
+		execute(i + 1, &stack);
 		free(lines[i]);
 		free_list(tokens);
 	}

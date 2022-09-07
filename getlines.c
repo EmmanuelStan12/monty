@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * getlines - gets the lines and returns them
@@ -18,7 +18,7 @@ char **getlines(int no_of_lines, char *filename)
 	file = fopen(filename, "r");
 	if (file == NULL)
 	{
-		fprintf(stderr, "Error:");
+		fprintf(stderr, "Error: Can't open file %s\n",  filename);
 		exit(EXIT_FAILURE);
 	}
 	lines = malloc(no_of_lines * sizeof(char *));

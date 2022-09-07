@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * token_size - determines the size of tokens in a string

@@ -1,9 +1,8 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * free_stack - frees items in the stack
  * @stack: stack
- * @line_number: the number
  * Return: void
  */
 void free_stack(stack_t **stack)
