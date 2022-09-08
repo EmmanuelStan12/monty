@@ -12,15 +12,16 @@ int check_input(char *input, int line_no)
 
 	if (input == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer", line_no);
+		fprintf(stderr, "L%d: usage: push integer\n", line_no);
 		exit(EXIT_FAILURE);
 	}
+	printf("input: %s\n", input);
 	if (strcmp(input, "0") == 0)
 		return (0);
 	num = atoi(input);
 	if (num == 0)
 	{
-		fprintf(stderr, "L%d: usage: push integer", line_no);
+		fprintf(stderr, "L%d: usage: push integer\n", line_no);
 		exit(EXIT_FAILURE);
 	}
 	return (num);

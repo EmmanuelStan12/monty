@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * div - div the second element by the first element
+ * _div - div the second element by the first element
  * @stack: the stack
  * @line_number: the line_number
  * Return: void
