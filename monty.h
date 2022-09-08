@@ -117,4 +117,6 @@ char *trim(char *str);
 
 int check_input(stack_t **stack, char *input, int line_no);
 
+int check_comment(char *line);
+
 #endif

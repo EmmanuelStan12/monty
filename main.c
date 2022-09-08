@@ -48,13 +48,13 @@ int main(int argc, char **argv)
 		int t_size;
 		char **tokens;
 
-		if (lines[i][0] == '#')
+		if (check_comment(lines[i]))
 		{
 			free(lines[i]);
 			continue;
 		}
-		t_size = token_size(lines[i], " ");
-		tokens = tokenize(t_size, lines[i], " \n");
+		t_size = token_size(lines[i], " \t\r");
+		tokens = tokenize(t_size, lines[i], " \t\r\n");
 		args.tokens = tokens;
 		args.opcode = tokens[0];
 		args.t_size = t_size;
