@@ -11,7 +11,8 @@ instruction_t instructions[] = {
 	{"sub", sub},
 	{"div", _div},
 	{"mul", mul},
-	{"mod", mod}
+	{"mod", mod},
+	{"pchar", pchar}
 };
 
 int stack_size = 0;

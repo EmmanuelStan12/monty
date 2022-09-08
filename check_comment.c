@@ -9,7 +9,8 @@ int check_comment(char *line)
 {
 	int i;
 
-	for (i = 0; isspace(line[i]); i++);
+	for (i = 0; isspace(line[i]); i++)
+		;
 	if (line[i] == '#')
 	{
 		return (1);
