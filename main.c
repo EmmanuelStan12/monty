@@ -14,7 +14,8 @@ instruction_t instructions[] = {
 	{"mod", mod},
 	{"pchar", pchar},
 	{"pstr", pstr},
-	{"rotl", rot1}
+	{"rotl", rot1},
+	{"rotr", rotr}
 };
 
 int stack_size = 0;
