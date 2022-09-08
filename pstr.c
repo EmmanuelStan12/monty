@@ -10,24 +10,21 @@ void pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current;
 	int num;
+	(void) line_number;
 
-	if (stack_size < 1)
-	{
-		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
-		clean_up(stack, line_number);
-		exit(EXIT_FAILURE);
-	}
 	current = *stack;
-	num = current->n;
-	while ((num >= 97 && num <= 122) || (num >= 65 && num <= 90))
+	while (current)
 	{
-		putchar(num);
-		if (!current->next)
+		num = current->n;
+		if ((num >= 97 && num <= 122) || (num >= 65 && num <= 90))
+		{
+			putchar(num);
+		}
+		else
 		{
 			break;
 		}
 		current = current->next;
-		num = current->n;
 	}
 	putchar('\n');
 }
