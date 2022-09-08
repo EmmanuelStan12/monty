@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include <ctype.h>
 
-#define INSTRUCTION_SIZE 13
+#define INSTRUCTION_SIZE 14
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -108,6 +108,8 @@ void mod(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
 
 void pstr(stack_t **stack, unsigned int line_number);
+
+void rot1(stack_t **stack, unsigned int line_number);
 
 void clean_up(stack_t **stack, int line_number);
 
