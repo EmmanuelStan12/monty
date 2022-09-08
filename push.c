@@ -18,7 +18,7 @@ void push(stack_t **stack, unsigned int line_number)
 		clean_up(stack, line_number);
 		exit(EXIT_FAILURE);
 	}
-	num = check_input(args.tokens[1], line_number);
+	num = check_input(stack, args.tokens[1], line_number);
 	item->n = num;
 	item->prev = NULL;
 	if (*stack == NULL)

@@ -115,6 +115,6 @@ void execute(int line_no, stack_t **stack);
 
 char *trim(char *str);
 
-int check_input(char *input, int line_no);
+int check_input(stack_t **stack, char *input, int line_no);
 
 #endif
