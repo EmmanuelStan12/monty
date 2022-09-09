@@ -21,6 +21,8 @@ int check_input(stack_t **stack, char *input, int line_no)
 	{
 		if (input[i] < 48 || input[i] > 57)
 		{
+			if (i == 0 && input[i] == '-')
+				continue;
 			fprintf(stderr, "L%d: usage: push integer\n", line_no);
 			clean_up(stack, line_no);
 			exit(EXIT_FAILURE);
@@ -29,11 +31,5 @@ int check_input(stack_t **stack, char *input, int line_no)
 	if (strcmp(input, "0") == 0)
 		return (0);
 	num = atoi(input);
-	if (num == 0)
-	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_no);
-		clean_up(stack, line_no);
-		exit(EXIT_FAILURE);
-	}
 	return (num);
 }

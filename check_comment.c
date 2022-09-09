@@ -7,13 +7,14 @@
  */
 int check_comment(char *line)
 {
-	int i;
+	int i, _size = 0;
 
-	for (i = 0; isspace(line[i]); i++)
+	_size = strlen(line);
+	for (i = 0; isspace(line[i]) && i < _size; i++)
 		;
-	if (line[i] == '#')
-	{
+	if (i == _size && isspace(line[i - 1]))
 		return (1);
-	}
+	if (line[i] == '#')
+		return (1);
 	return (0);
 }

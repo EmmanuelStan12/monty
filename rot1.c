@@ -10,10 +10,8 @@ void rot1(stack_t **stack, unsigned int line_number)
 {
 	stack_t *first, *last, *current, *second;
 
-	if (stack_size < 1)
-	{
+	if (stack_size <= 1)
 		return;
-	}
 	if (stack_size == 2)
 	{
 		swap(stack, line_number);
